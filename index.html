@@ -35,7 +35,6 @@
         }
         .grass { background-color: #a8d5ba; } /* Soft green for grass */
         .water { background-color: #b3e5fc; } /* Light blue for water */
-        .mountain { background-color: #cfd8dc; } /* Light gray for mountains */
         button {
             margin: 20px;
             padding: 10px 20px;
@@ -49,6 +48,37 @@
         }
         button:hover {
             background-color: #357abd; /* Darker blue for hover effect */
+        }
+
+        /* Media queries for mobile devices */
+        @media (max-width: 600px) {
+            .map {
+                grid-template-columns: repeat(15, 15px);
+                grid-template-rows: repeat(15, 15px);
+            }
+            .tile {
+                width: 15px;
+                height: 15px;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .map {
+                grid-template-columns: repeat(10, 10px);
+                grid-template-rows: repeat(10, 10px);
+            }
+            .tile {
+                width: 10px;
+                height: 10px;
+            }
+            button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
