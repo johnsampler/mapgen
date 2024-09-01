@@ -18,18 +18,20 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            padding: 10px; /* Added padding for small screens */
         }
         .map {
             display: grid;
-            grid-template-columns: repeat(30, 20px);
-            grid-template-rows: repeat(30, 20px);
+            grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); /* Responsive grid columns */
+            grid-template-rows: repeat(auto-fit, minmax(20px, 1fr)); /* Responsive grid rows */
             background-color: #f9f9f9; /* Light background for the map */
             border: 2px solid #b0bec5; /* Soft border color */
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+            width: 100%; /* Make the map full-width */
+            max-width: 600px; /* Set a max-width for larger screens */
+            aspect-ratio: 1; /* Maintain a square aspect ratio */
         }
         .tile {
-            width: 20px;
-            height: 20px;
             box-sizing: border-box;
             border: none;
         }
@@ -46,6 +48,8 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+            width: 100%; /* Make the button full-width on small screens */
+            max-width: 200px; /* Set a max-width for larger screens */
         }
         button:hover {
             background-color: #357abd; /* Darker blue for hover effect */
